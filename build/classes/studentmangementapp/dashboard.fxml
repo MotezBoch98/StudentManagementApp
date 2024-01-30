@@ -21,7 +21,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentmangementapp.dashboardController">
    <children>
       <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -37,14 +37,14 @@
                                     <Font name="Tahoma" size="15.0" />
                                  </font>
                               </Label>
-                              <Button layoutX="1036.0" layoutY="10.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="55.0" styleClass="close" stylesheets="@dashboardDesign.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                              <Button fx:id="close" layoutX="1036.0" layoutY="10.0" mnemonicParsing="false" onAction="#close" prefHeight="33.0" prefWidth="55.0" styleClass="close" stylesheets="@dashboardDesign.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
                                  <graphic>
-                                    <FontAwesomeIcon fx:id="close" glyphName="CLOSE" />
+                                    <FontAwesomeIcon glyphName="CLOSE" />
                                  </graphic>
                               </Button>
-                              <Button layoutX="987.0" layoutY="3.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="55.0" styleClass="minimize" stylesheets="@dashboardDesign.css">
+                              <Button fx:id="minimize" layoutX="987.0" layoutY="3.0" mnemonicParsing="false" onAction="#minimize" prefHeight="33.0" prefWidth="55.0" styleClass="minimize" stylesheets="@dashboardDesign.css">
                                  <graphic>
-                                    <FontAwesomeIcon fx:id="minimize" glyphName="MINUS" />
+                                    <FontAwesomeIcon glyphName="MINUS" />
                                  </graphic>
                               </Button>
                            </children>
@@ -69,29 +69,29 @@
                                  </font>
                               </Label>
                               <Line endX="87.5" layoutX="100.0" layoutY="180.0" startX="-88.5" stroke="WHITE" />
-                              <Button fx:id="home_btn" layoutX="10.0" layoutY="221.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Home" textFill="WHITE">
+                              <Button fx:id="home_btn" layoutX="10.0" layoutY="221.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Home" textFill="WHITE">
                                  <graphic>
                                     <FontAwesomeIcon fill="WHITE" glyphName="HOME" size="1.5em" text="" />
                                  </graphic>
                               </Button>
-                              <Button fx:id="addStudents_btn" layoutX="11.0" layoutY="252.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Add Students" textFill="WHITE">
+                              <Button fx:id="addStudents_btn" layoutX="11.0" layoutY="252.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Add Students" textFill="WHITE">
                                  <graphic>
                                     <FontAwesomeIcon fill="WHITE" glyphName="PLUS_CIRCLE" size="1.5em" />
                                  </graphic>
                               </Button>
-                              <Button fx:id="availableCourses_btn" layoutX="10.0" layoutY="283.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Available Courses" textFill="WHITE">
+                              <Button fx:id="availableCourses_btn" layoutX="10.0" layoutY="283.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Available Courses" textFill="WHITE">
                                  <graphic>
                                     <FontAwesomeIcon fill="WHITE" glyphName="BOOK" size="1.5em" />
                                  </graphic>
                               </Button>
-                              <Button fx:id="studentGrades_btn" layoutX="11.0" layoutY="317.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Grades Of Students" textFill="WHITE">
+                              <Button fx:id="studentGrades_btn" layoutX="11.0" layoutY="317.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Grades Of Students" textFill="WHITE">
                                  <graphic>
                                     <FontAwesomeIcon fill="WHITE" glyphName="CLIPBOARD" size="1.5em" />
                                  </graphic>
                               </Button>
-                              <Button layoutX="14.0" layoutY="516.0" mnemonicParsing="false" styleClass="logout" stylesheets="@dashboardDesign.css">
+                              <Button fx:id="logout" layoutX="14.0" layoutY="516.0" mnemonicParsing="false" onAction="#logout" styleClass="logout" stylesheets="@dashboardDesign.css">
                                  <graphic>
-                                    <FontAwesomeIcon fx:id="logout" fill="WHITE" glyphName="SIGN_OUT" size="1.5em" styleClass="shadow" />
+                                    <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="1.5em" styleClass="shadow" />
                                  </graphic>
                               </Button>
                               <Label layoutX="55.0" layoutY="520.0" text="Sign Out" textFill="WHITE">
