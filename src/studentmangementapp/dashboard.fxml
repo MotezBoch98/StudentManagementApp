@@ -234,7 +234,7 @@
                                           <String fx:value="shadow" />
                                        </styleClass>
                                        <children>
-                                          <TextField fx:id="addStudents_search" layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="243.0" promptText="Search" styleClass="search" stylesheets="@dashboardDesign.css" />
+                                          <TextField fx:id="addStudents_search" layoutX="14.0" layoutY="14.0" onAction="#addStudentsSearch" prefHeight="30.0" prefWidth="243.0" promptText="Search" styleClass="search" stylesheets="@dashboardDesign.css" />
                                           <FontAwesomeIcon fill="#0000007e" glyphName="SEARCH" layoutX="19.0" layoutY="35.0" size="1.5em" />
                                           <TableView fx:id="addStudents_tableView" layoutX="14.0" layoutY="61.0" onMouseClicked="#addStudentsSelect" prefHeight="200.0" prefWidth="845.0">
                                             <columns>
@@ -310,7 +310,7 @@
                                     </AnchorPane>
                                     <Button fx:id="addStudents_addBtn" layoutX="776.0" layoutY="491.0" mnemonicParsing="false" onAction="#addStudentsAdd" prefHeight="25.0" prefWidth="75.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Add" />
                                     <Button fx:id="addStudents_updateBtn" layoutX="687.0" layoutY="491.0" mnemonicParsing="false" onAction="#addStudentUpdate" prefHeight="25.0" prefWidth="75.0" styleClass="update-btn" stylesheets="@dashboardDesign.css" text="Update" />
-                                    <Button fx:id="addStudents_deleteBtn" layoutX="597.0" layoutY="492.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" styleClass="delete-btn" stylesheets="@dashboardDesign.css" text="Delete" />
+                                    <Button fx:id="addStudents_deleteBtn" layoutX="597.0" layoutY="492.0" mnemonicParsing="false" onAction="#addStudentDelete" prefHeight="25.0" prefWidth="75.0" styleClass="delete-btn" stylesheets="@dashboardDesign.css" text="Delete" />
                                     <Button fx:id="addStudents_clearBtn" layoutX="508.0" layoutY="492.0" mnemonicParsing="false" onAction="#addStudentsClear" prefHeight="25.0" prefWidth="75.0" styleClass="clear-btn" stylesheets="@dashboardDesign.css" text="Clear" />
                                  </children>
                               </AnchorPane>
